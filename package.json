@@ -4,6 +4,7 @@
   "description": "Step 1: see what's going on under the hood     1. loading react with script tags     2. createElement to see how JSX is built",
   "main": "index.js",
   "scripts": {
+    "dev": "parcel src/index.html",
     "format": "prettier --write \"src/**/*.{js, jsx}\"",
     "lint": "eslint \"src/**/*.{js, jsx}\" --quiet"
   },
@@ -21,6 +22,11 @@
   "devDependencies": {
     "eslint": "^7.18.0",
     "eslint-config-prettier": "^8.1.0",
+    "parcel": "^1.12.3",
     "prettier": "^2.3.1"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
