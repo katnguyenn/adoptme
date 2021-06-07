@@ -14,19 +14,6 @@
     <script src="https://unpkg.com/react@17.0.1/umd/react.development.js"></script>
     <!-- Underlying library that interacts with the dom -->
     <script src="https://unpkg.com/react-dom@17.0.1/umd/react-dom.development.js"></script>
-    <script>
-        // Anything capitalized, React assumes you created. Anything lowercase is an actual name of html element.
-        const App = () => {
-            return React.createElement(
-                'div',
-                // attributes (id, class, aria, etc.)
-                {},
-                React.createElement('h1', {}, 'Adopt Me!')
-            );
-        };
-        // Call createElement here to create an instance of the App component
-        ReactDOM.render(React.createElement(App), document.getElementById('root'))
-
-    </script>
+    <script src="App.js"></script>
 </body>
 </html>
