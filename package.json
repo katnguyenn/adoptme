@@ -1,0 +1,23 @@
+{
+  "name": "adoptme",
+  "version": "1.0.0",
+  "description": "Step 1: see what's going on under the hood     1. loading react with script tags     2. createElement to see how JSX is built",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.{js, jsx}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katnguyenn/adoptme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katnguyenn/adoptme/issues"
+  },
+  "homepage": "https://github.com/katnguyenn/adoptme#readme",
+  "devDependencies": {
+    "prettier": "^2.3.1"
+  }
+}
