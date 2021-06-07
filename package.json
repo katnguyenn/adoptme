@@ -4,7 +4,8 @@
   "description": "Step 1: see what's going on under the hood     1. loading react with script tags     2. createElement to see how JSX is built",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --write \"src/**/*.{js, jsx}\""
+    "format": "prettier --write \"src/**/*.{js, jsx}\"",
+    "lint": "eslint \"src/**/*.{js, jsx}\" --quiet"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,8 @@
   },
   "homepage": "https://github.com/katnguyenn/adoptme#readme",
   "devDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^8.1.0",
     "prettier": "^2.3.1"
   }
 }
