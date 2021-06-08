@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import ThemeContext from "./ThemeContext";
 import useBreedList from "./useBreedList";
 import Results from "./Results";
 
@@ -11,15 +12,16 @@ const SearchParams = () => {
     const [breed, setBreed] = useState("");
     const [pets, setPets] = useState([]);
     const [breeds] = useBreedList(animal);
+    const [theme, setTheme] = useContext(ThemeContext);
 
     useEffect(() => {
         requestPets()
-    },[]) // eslint-disable-line react-hooks/exhaustive-deps
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     async function requestPets() {
         const res = await fetch(
             `http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`
-            
+
         );
         const json = await res.json()
         setPets(json.pets)
@@ -48,15 +50,15 @@ const SearchParams = () => {
                         {/* the empty space above other animal options */}
                         <option />
                         {ANIMALS.map(animal => (
-                                <option value={animal} key={animal}>
-                                    {animal}
-                                </option>
-                            
-                            ))}
-                        </select>
-                        </label>
+                            <option value={animal} key={animal}>
+                                {animal}
+                            </option>
+
+                        ))}
+                    </select>
+                </label>
                 <label htmlFor="breed">
-                   Breed
+                    Breed
                 <select
                         id="breed"
                         value={breed}
@@ -73,11 +75,24 @@ const SearchParams = () => {
                         ))}
                     </select>
                 </label>
-            <button>Submit</button>
+                <label htmlFor="theme">
+                    Theme
+                    <select
+                        value={theme}
+                        onChange={e => setTheme(e.target.value)}
+                        onBlur={e => setTheme(e.target.value)}
+                    >
+                        <option value="darkblue">Dark Blue</option>
+                        <option value="peru">Peru</option>
+                        <option value="chartreuse">Chartreuse</option>
+                        <option value="mediumorchid">Medium Orchid</option>
+                    </select>
+                </label>
+                <button style={{ backgroundColor: theme }}>Submit</button>
             </form >
-          
+
             <Results pets={pets} />
-            
+
 
         </div >
     )
