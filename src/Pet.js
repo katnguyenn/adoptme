@@ -1,6 +1,7 @@
 // Anything capitalized, React assumes you created. Anything lowercase is an actual name of html element.
 // props: property passed from one parent component to child component (one way data flow). Makes it easy and flexible to dynamically generate content
 
+import { Link } from "react-router-dom";
 
 const Pet = ({
     name,
@@ -17,7 +18,7 @@ if(images.length) {
 }
 
     return (
-        <a href={`/details/${id}`} className="pet">
+        <Link to={`/details/${id}`} className="pet">
            <div className="image-container">
                <img src={hero} alt={name} />
            </div>
@@ -25,7 +26,7 @@ if(images.length) {
                <h1>{name}</h1>
                <h2>{`${animal} - ${breed} - ${location}`}</h2>
            </div>
-        </a>
+        </Link>
     );
 };
 
