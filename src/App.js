@@ -9,7 +9,7 @@ const App = () => {
     const theme = useState("darkblue");
     return (
         <StrictMode>
-        // anything inside of ThemeContext will be available to components
+        {/* // anything inside of ThemeContext will be available to components */}
         <ThemeContext.Provider value={theme}>
             <div className="p-0 m-0"
                 style={{
