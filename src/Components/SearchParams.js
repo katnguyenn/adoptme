@@ -65,7 +65,7 @@ const SearchParams = () => {
                 <label className="search-label" htmlFor="breed">
                     Breed
                 <select
-                        className="search-control disabled:opacity-50"
+                        className="search-control"
                         id="breed"
                         value={breed}
                         onChange={e => setBreed(e.target.value)}
