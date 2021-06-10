@@ -10,7 +10,11 @@ const App = () => {
     return (
         // anything inside of ThemeContext will be available to components
         <ThemeContext.Provider value={theme}>
-        <div>
+        <div className="p-0 m-0"
+            style={{
+                background: "url(http://pets-images.dev-apis.com/pets/wallpaperA.jpg)"
+            }}
+            >
             <Router>
                 <header>
                     <Link to="/">
