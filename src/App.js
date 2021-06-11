@@ -1,16 +1,17 @@
 import { StrictMode, useState, lazy, Suspense } from "react";
 import { Route, Switch, Link } from "react-router-dom";
-import ThemeContext from "./Components/ThemeContext";
+import { Provider } from "react-redux";
+import store from "./store";
 
 const Details = lazy(() => import("./Components/Details"));
 const SearchParams = lazy(() => import("./Components/SearchParams"))
 
 const App = () => {
-    const theme = useState("darkblue");
+    
     return (
         <StrictMode>
         {/* // anything inside of ThemeContext will be available to components */}
-        <ThemeContext.Provider value={theme}>
+            <Provider store={store}>
             <div className="p-0 m-0"
                 style={{
                     background: "url(http://pets-images.dev-apis.com/pets/wallpaperA.jpg)"
@@ -38,7 +39,7 @@ const App = () => {
 
 
             </div>
-        </ThemeContext.Provider>
+       </Provider>
         </StrictMode>
     )
 
