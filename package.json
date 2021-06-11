@@ -41,13 +41,16 @@
     "parcel": "^1.12.3",
     "postcss": "^7.0.35",
     "prettier": "^2.3.1",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
+    "typescript": "^4.2.2"
   },
   "dependencies": {
     "express": "^4.17.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-router-dom": "^5.2.0"
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5"
   },
   "browserslist": [
     "last 2 Chrome versions"
